@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Jazzmin Admin Panel
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,10 +41,16 @@ INSTALLED_APPS = [
     # 3rd Party Apps
     'rest_framework',
     'translations',
+    "drf_yasg",
     # Apps
     'service',
-    'Utilities',
+    'work',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 12
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

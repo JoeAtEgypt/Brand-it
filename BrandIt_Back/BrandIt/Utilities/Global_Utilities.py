@@ -1,6 +1,6 @@
 from django.core import exceptions
 
-image_extensions = ['jpg', 'png', 'jpeg']
+image_extensions = ['jpg', 'png', 'jpeg', 'JPG', 'JPEG', 'PNG']
 allowed_image_extensions_msg = "Allowed Formats : '.jpg/.jpeg', '.png'"
 
 def FileSize(value):
